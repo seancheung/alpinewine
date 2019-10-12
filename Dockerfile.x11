@@ -1,0 +1,14 @@
+ARG ARCH_TAG
+
+FROM seancheung/alpinewine:wine$ARCH_TAG
+LABEL maintainer="Sean Cheung <theoxuanx@gmail.com>"
+
+RUN set -ex && \
+    echo "Installing dependencies..." && \
+    apk add --no-cache x11vnc && \
+    echo "Clean Up..." && \
+    rm -rf /var/cache/apk/*
+
+COPY x11vnc.conf /etc/supervisor/conf.d/
+
+EXPOSE 5900

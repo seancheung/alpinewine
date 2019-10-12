@@ -1,8 +1,8 @@
 #!/bin/bash
 
 if [[ "$DOCKER_TAG" =~ "64" ]]; then
-    export ARC=x86_64
+    export ARCH=x86_64 ARCH_TAG=64
 else
-    export ARC=x86
+    export ARCH=x86
 fi
-docker build --build-arg ARC=$ARC -f $DOCKERFILE_PATH -t $IMAGE_NAME .
+docker build --build-arg ARCH=$ARCH --build-arg ARCH_TAG=$ARCH_TAG -f $DOCKERFILE_PATH -t $IMAGE_NAME .
