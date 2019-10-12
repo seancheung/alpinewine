@@ -26,9 +26,9 @@ docker pull seancheung/alpinewine:<tag>
 | LANG             | en_US.UTF-8     |
 | LC_ALL           | en_US.UTF-8     |
 
-> SCREEN: This option creates screen screennum and sets its width, height, and depth to W, H, and D respectively. By default, only screen 0 exists and has the dimensions 1280x1024x8.
-
 > WINEDLLOVERRIDES: Wine DLL overrides.
+
+> SCREEN: This option creates screen screennum and sets its width, height, and depth to W, H, and D respectively. By default, only screen 0 exists and has the dimensions 1280x1024x8.
 
 ## Custom build Args
 
@@ -36,3 +36,7 @@ docker pull seancheung/alpinewine:<tag>
 | --------- | ------- |
 | ARCH      | x86     |
 | CN_MIRROR | false   |
+
+> ARC: x86, x86_64
+
+> CN_MIRROR: Use AliCloud registry mirror
